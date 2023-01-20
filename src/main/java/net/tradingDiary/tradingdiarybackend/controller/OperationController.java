@@ -41,11 +41,13 @@ public class OperationController {
         return operationRepository.findById(id)
                 .map(operation -> {
                     operation.setData(editOperation.getData());
+                    operation.setTime(editOperation.getTime());
                     operation.setResult(editOperation.getResult());
                     operation.setDynamic(editOperation.getDynamic());
                     operation.setTargetPoints(editOperation.getTargetPoints());
                     operation.setStopPoints(editOperation.getStopPoints());
                     operation.setComments(editOperation.getComments());
+                    operation.setImage(editOperation.getImage());
                     return operationRepository.save(operation);
                 })
                 .orElseGet(() -> {
