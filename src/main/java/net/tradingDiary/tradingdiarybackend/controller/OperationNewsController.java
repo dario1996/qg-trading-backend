@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api")
+//@CrossOrigin("https://qg-trading.netlify.app/")
 @CrossOrigin("http://localhost:8081/")
 public class OperationNewsController {
     @Autowired

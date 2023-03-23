@@ -25,6 +25,8 @@ public class OperationNews {
     private String result;
     @Column(name = "news", nullable = false)
     private List<String> news;
+    @Column(name = "max_target_reached", nullable = false)
+    private double maxTargetReached;
     @Column(name = "target_points")
     private double targetPoints;
     @Column(name = "stop_points")
@@ -50,6 +52,10 @@ public class OperationNews {
 
     public String getNews() {
         return this.news.toString();
+    }
+
+    public double getMaxTargetReached() {
+        return this.maxTargetReached;
     }
 
     public double getTargetPoints() {
@@ -86,6 +92,10 @@ public class OperationNews {
 
     public void setNews(List<String> news) {
         this.news = news;
+    }
+
+    public void setMaxTargetReached(double maxTargetReached) {
+        this.maxTargetReached = maxTargetReached;
     }
 
     public void setTargetPoints(double targetPoints) {

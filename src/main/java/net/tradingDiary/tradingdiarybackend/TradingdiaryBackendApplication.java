@@ -1,6 +1,7 @@
 package net.tradingDiary.tradingdiarybackend;
 
 
+import net.tradingDiary.tradingdiarybackend.repository.OperationNewsRepository;
 import net.tradingDiary.tradingdiarybackend.repository.OperationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -12,6 +13,7 @@ public class TradingdiaryBackendApplication implements CommandLineRunner {
 
 	@Autowired
 	private OperationRepository operationRepository;
+	private OperationNewsRepository operationNewsRepository;
 
 	public static void main(String[] args) {
 		SpringApplication.run(TradingdiaryBackendApplication.class, args);
